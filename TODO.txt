@@ -1,0 +1,12 @@
+TODO:
++ Login
+- Main page (Data Table)
+- Loginin funktionaalisuus 
+- DataBase (relaatiot voi hoitaa myöhemmin)
+- Node-controller
+- Varaus
+-- Varauskalenteri ? toteutus valmiilla pohjalla ?
+- Loginin urlin tietojen piilotus
+? muista minut kirjautuessa ?
+
+
