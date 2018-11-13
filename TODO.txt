@@ -1,12 +1,20 @@
 TODO:
 + Login
-- Main page (Data Table)
-- Loginin funktionaalisuus 
-- DataBase (relaatiot voi hoitaa myöhemmin)
-- Node-controller
++ Loginin funktionaalisuus
++ DataBase
+
+-+ Main page (Data Table)
+- Omien tietojen muokkaaminen
+- Laitehallinta: funktionaalisuus ja käyttöliittymä
+- Scriptit omiin filuihin
+- HTML:t omiin filuihin
+- Login info jos salasana väärin vois olla fiksummin
+- Signin toiminnallisuus
+- DB (relaatiot voi hoitaa myöhemmin)
+-+ Node-controller
 - Varaus
 -- Varauskalenteri ? toteutus valmiilla pohjalla ?
-- Loginin urlin tietojen piilotus
 ? muista minut kirjautuessa ?
-meow
++++++meow
+
 
