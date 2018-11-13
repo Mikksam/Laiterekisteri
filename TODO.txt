@@ -3,6 +3,8 @@ TODO:
 + Loginin funktionaalisuus
 + DataBase
 
+!!!!! Pistä GIT HUB:iin filut kunnolla (joka filu erikseen pl. alimmat kansiot) !!!!
+
 -+ Main page (Data Table)
 - Omien tietojen muokkaaminen
 - Laitehallinta: funktionaalisuus ja käyttöliittymä
