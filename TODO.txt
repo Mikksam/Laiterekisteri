@@ -9,7 +9,7 @@ TODO:
 -+ Node-controlle
 
 -!!!!! Pistä GIT HUB:iin filut kunnolla (joka filu erikseen pl. alimmat kansiot) !!!!
-
+-Datatablen tietojen muokkaaminen: erillinen formi ko. hommaan vai mitenkä?
 - Omien tietojen muokkaaminen
 - Laitehallinta: funktionaalisuus ja käyttöliittymä
 - Login info jos salasana väärin vois olla fiksummin
