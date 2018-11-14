@@ -3,18 +3,18 @@ TODO:
 + Loginin funktionaalisuus
 + DataBase
 + Main page (Data Table)
++ Signin toiminnallisuus
++ Omien tietojen muokkaaminen
++ Laitehallinta: funktionaalisuus ja käyttöliittymä
 
 -+Scriptit omiin filuihin
 -+ HTML:t omiin filuihin
--+ Node-controlle
+-+ Node-controller
+-+ DB (relaatiot voi hoitaa myöhemmin)
 
 -!!!!! Pistä GIT HUB:iin filut kunnolla (joka filu erikseen pl. alimmat kansiot) !!!!
 -Datatablen tietojen muokkaaminen: erillinen formi ko. hommaan vai mitenkä?
-- Omien tietojen muokkaaminen
-- Laitehallinta: funktionaalisuus ja käyttöliittymä
-- Login info jos salasana väärin vois olla fiksummin
-- Signin toiminnallisuus
-- DB (relaatiot voi hoitaa myöhemmin)
+? Login info jos salasana väärin vois olla fiksummin ?
 - Varaus
 -- Varauskalenteri ? toteutus valmiilla pohjalla ?
 ? muista minut kirjautuessa ?
