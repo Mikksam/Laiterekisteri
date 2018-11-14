@@ -2,18 +2,19 @@ TODO:
 + Login
 + Loginin funktionaalisuus
 + DataBase
++ Main page (Data Table)
 
-!!!!! Pistä GIT HUB:iin filut kunnolla (joka filu erikseen pl. alimmat kansiot) !!!!
+-+Scriptit omiin filuihin
+-+ HTML:t omiin filuihin
+-+ Node-controlle
 
--+ Main page (Data Table)
+-!!!!! Pistä GIT HUB:iin filut kunnolla (joka filu erikseen pl. alimmat kansiot) !!!!
+
 - Omien tietojen muokkaaminen
 - Laitehallinta: funktionaalisuus ja käyttöliittymä
-- Scriptit omiin filuihin
-- HTML:t omiin filuihin
 - Login info jos salasana väärin vois olla fiksummin
 - Signin toiminnallisuus
 - DB (relaatiot voi hoitaa myöhemmin)
--+ Node-controller
 - Varaus
 -- Varauskalenteri ? toteutus valmiilla pohjalla ?
 ? muista minut kirjautuessa ?
