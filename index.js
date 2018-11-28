@@ -176,9 +176,9 @@ app.route('/updateDevice')
 //Orders
 //////////////////////////////////////////////////////////////////////////////
 
-app.get('/fetchOrders', function (req, res) {
-
-    customerController.fetchOrders().then(function (data) {
+app.get('/fetchMyOrders', function (req, res) {
+    var email = req.param('email');
+    customerController.fetchMyOrders(email).then(function (data) {
         console.log(JSON.stringify(data));
         return data;
     })
@@ -190,7 +190,7 @@ app.get('/fetchOrders', function (req, res) {
         })
         .then((info) => {
             //suoritetaan vaikka tulis virhe
-            if (info == null) info = [{ /* tänne, mitä halutaan palauttaa jos palautus on null */ }];
+            if (info == null) info = [{varaus_id: "Ei löytynyt varauksia", sarjanumero: "null", laite_nimi: "null", laite_merkki: "null", laite_malli: "null", status: "null", varauspvm: "null", lainauspvm: "null", palautuspvm: "null"}];
             res.send(info);
         });
 });

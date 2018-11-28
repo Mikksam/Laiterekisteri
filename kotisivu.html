@@ -1,0 +1,111 @@
+﻿<div id="DTdiv">
+    <table id="omatvaraukset_taulu" class="table table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Varausnumero</th>
+                <th>Laitteen sarjanumero</th>
+                <th>Laitenimi</th>
+                <th>Merkki</th>
+                <th>Malli</th>
+                <th>Status</th>
+                <th>Laitteen varauspvm</th>
+                <th>Lainan alkupvm</th>
+                <th>Lainan loppupvm</th>
+               
+            </tr>
+        </thead>
+    </table>
+   
+</div>
+<script src="/views/Mainpage/js/mainpage.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script>
+    var email = $.cookie("user");
+    $(document).ready(function () {
+        fetchData();
+        function fetchData() {
+
+            $('#omatvaraukset_taulu').DataTable().destroy();
+            $.ajax({
+                url: "http://localhost:3002/fetchMyOrders?email=" + email,
+                method: 'GET',
+                "dataType": "json"
+            }).done(function (data, textStatus, jqXHR) {
+                
+                 $('#omatvaraukset_taulu').DataTable({
+
+                    "data": data,
+                    "columns": [
+                        { "data": "varaus_id" },
+                        { "data": "sarjanumero" },
+                        { "data": "laite_nimi" },
+                        { "data": "laite_merkki" },
+                        { "data": "laite_malli" },
+                        { "data": "status" },
+                        { "data": "varauspvm" },
+                        { "data": "lainauspvm" },
+                        { "data": "palautuspvm" }
+                       
+                       
+                    ],
+
+                    "language": {
+                        "sEmptyTable": "Ei näytettäviä tuloksia.",
+                        "sInfo": "Näytetään rivit _START_ - _END_ (yhteensä _TOTAL_ )",
+                        "sInfoEmpty": "Näytetään 0 - 0 (yhteensä 0)",
+                        "sInfoFiltered": "(suodatettu _MAX_ tuloksen joukosta)",
+                        "sInfoPostFix": "",
+                        "sInfoThousands": ",",
+                        "sLengthMenu": "Näytä kerralla _MENU_ riviä",
+                        "sLoadingRecords": "Ladataan...",
+                        "sProcessing": "Hetkinen...",
+                        "sSearch": "Etsi:",
+                        "sZeroRecords": "Tietoja ei löytynyt",
+                        "oPaginate": {
+                            "sFirst": "Ensimmäinen",
+                            "sLast": "Viimeinen",
+                            "sNext": "Seuraava",
+                            "sPrevious": "Edellinen"
+                        },
+                        "oAria": {
+                            "sSortAscending": ": A-Z",
+                            "sSortDescending": ": Z-A"
+                        },
+                        "select": {
+                            "rows": {
+                                "_": "Valittuna %d riviä",
+                                "0": "Klikkaa riviä valitaksesi sen",
+                                "1": "Valittuna vain yksi rivi"
+                            }
+                        },
+                        "buttons": {
+                            "copy": "Kopioi",
+                            "copySuccess": {
+                                "1": "Yksi rivi kopioitu leikepöydälle",
+                                "_": "%d riviä kopioitu leikepöydälle"
+                            },
+                            "copyTitle": "Kopioi leikepöydälle",
+                            "copyKeys": "Paina <i>ctrl</i> tai <i>\u2318</i> + <i>C</i> kopioidaksesi taulukon arvot<br> leikepöydälle. <br><br>Peruuttaaksesi klikkaa tähän tai Esc."
+                        },
+                    }
+                });
+
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                console.log("Kutsu epäonnistui");
+
+            }).always(function (jqXHR, textStatus, errorThrown) {
+                console.log("meow");
+            });
+        }
+
+    });
+
+    $('#taulu').on('click', '#muokkaabutton', function () {
+        var sarjanumero = $(this).closest('tr').find('td:eq(0)').text();
+        $.cookie('sarjanumero', sarjanumero, { expires: 1 });
+        $("#root").load("http://localhost:3002/LoadEditDevice");
+    });
+
+</script>
