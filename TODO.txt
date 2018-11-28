@@ -18,6 +18,7 @@ TODO:
 -teeman ja ulkosasun miettiminen mainpageen
 -käytettävyyden testaaminen
 -kalenterin tarkastelut: samanaikaiset varaukset jne!
+-Sisäänkirjautuessa enterin conffaus!
 
 ? Login info jos salasana väärin vois olla fiksummin ?
 ? muista minut kirjautuessa ?
