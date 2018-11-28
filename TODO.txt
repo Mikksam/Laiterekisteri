@@ -6,18 +6,21 @@ TODO:
 + Signin toiminnallisuus
 + Omien tietojen muokkaaminen
 + Laitehallinta: funktionaalisuus ja käyttöliittymä
++ Node-controller
 
--+Scriptit omiin filuihin
--+ HTML:t omiin filuihin
--+ Node-controller
 -+ DB (relaatiot voi hoitaa myöhemmin)
 
--!!!!! Pistä GIT HUB:iin filut kunnolla (joka filu erikseen pl. alimmat kansiot) !!!!
+
 -Datatablen tietojen muokkaaminen: erillinen formi ko. hommaan vai mitenkä?
-? Login info jos salasana väärin vois olla fiksummin ?
-- Varaus
+-korjaa laitedatatablen muokkauksen jälkeinen räjähdys
+- Varaus?
 -- Varauskalenteri ? toteutus valmiilla pohjalla ?
+-teeman ja ulkosasun miettiminen mainpageen
+-käytettävyyden testaaminen
+
+? Login info jos salasana väärin vois olla fiksummin ?
 ? muista minut kirjautuessa ?
+
 +++++meow
 
 
