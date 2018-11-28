@@ -17,6 +17,7 @@ TODO:
 -- Varauskalenteri ? toteutus valmiilla pohjalla ?
 -teeman ja ulkosasun miettiminen mainpageen
 -käytettävyyden testaaminen
+-kalenterin tarkastelut: samanaikaiset varaukset jne!
 
 ? Login info jos salasana väärin vois olla fiksummin ?
 ? muista minut kirjautuessa ?
