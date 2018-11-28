@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Laiterekisteri</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="licon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+
+    <!--===============================================================================================-->
+
+
+
+    <style>
+        body {
+            display: grid;
+            grid-template-areas: "header" "main" "footer";
+            grid-template-rows: 100px 1fr 100px;
+            grid-template-columns: 100% 1fr 50%;
+            grid-gap: 10px;
+            margin: 0;
+        }
+
+        #root {
+            grid-area: main;
+        }
+
+        #DTdiv {
+            grid-area: main;
+            width: 100%;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+        }
+
+
+        @media screen and (max-width: 500px) {
+            .navbar a {
+                float: none;
+                display: block;
+            }
+        }
+    </style>
+    <script>
+
+        $(document).ready(function () {
+            var keksi;
+            if ($.cookie('status') == 2) {
+                $('#hallinta').hide();
+            }
+            if (!!$.cookie('user')) {              
+                keksi = $.cookie('user');
+                console.log("Keksi löytyi: " + keksi);
+            } else {
+                console.log("Keksiä ei löytyi");
+                window.location = "http://localhost:3002/login";
+            }
+
+            $('#home').click(function () {
+                //ladataan tällä haluttu filu diviin
+                $("#root").load("http://localhost:3002/homepage");
+            });
+            $('#logout').click(function () {
+                $.removeCookie('user', { path: '/' });
+                $.removeCookie('status', { path: '/' });
+            });
+
+            $('#settings').click(function () {
+
+                window.location = "http://localhost:3002/settings";
+            });
+
+        });
+
+        // ? Sivun ositus (header, main, footer) ?
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Laiterekisteri</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#"  id="home"><span class="glyphicon glyphicon-home"></span> Omat lainat</a></liclass="active">
+                    <li><a href="#" id="lainaa">Lainaa laite</a></li>
+                    <li><a href="#" id="hallinta">Laitehallinta</a></li>
+                   
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://localhost:3002/settings" id="settings"><span class="glyphicon glyphicon-user"></span> Omat asetukset</a></li>
+                    <li><a href="http://localhost:3002/login" id="logout"><span class="glyphicon glyphicon-log-out"></span> Kirjaudu ulos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="root">
+
+
+    </div>
+    
+    
+    
+    <script>
+
+        $('#hallinta').click(function () {
+            $("#root").load("http://localhost:3002/Laitehallinta");
+
+        });
+
+    </script>
+</body>
+</html>

@@ -188,10 +188,11 @@ module.exports =
     //////////////////////////////////////////////////////////////////////////////
 
 
-        fetchOrders: function (email) {
+    fetchMyOrders: function (email) {
+
             return new Promise((resolve, reject) => {
 
-                connection.query('SELECT * FROM varaus WHERE kayttajanimi = ?', [email], function (error, results, fields) {
+                connection.query('SELECT v.varaus_id, l.sarjanumero, l.laite_nimi, l.laite_merkki, l.laite_malli, v.status, v.varauspvm, v.lainauspvm, v.palautuspvm FROM varaus AS v INNER JOIN laite AS l ON v.laite_id = l.laite_id INNER JOIN kayttaja AS k ON v.kayttaja_id = k.kayttaja_id WHERE k.kayttajanimi = ?', [email], function (error, results, fields) {
                     if (error) {
                         console.log("Virhe haettaessa dataa varaus-taulusta, syy: " + error);
                         reject("Virhe haettaessa dataa varaus-taulusta, syy: " + error);
@@ -203,6 +204,22 @@ module.exports =
                 });
             });
         },
+
+    fetchOrders: function (a) {
+        return new Promise((resolve, reject) => {
+
+            connection.query('SELECT * FROM varaus WHERE kayttajanimi = ?', [a], function (error, results, fields) {
+                if (error) {
+                    console.log("Virhe haettaessa dataa varaus-taulusta, syy: " + error);
+                    reject("Virhe haettaessa dataa varaus-taulusta, syy: " + error);
+                }
+                else {
+                    console.log("Data (rev) = " + JSON.stringify(results));
+                    resolve(results);
+                }
+            });
+        });
+    },
 
         addOrder: function (req, res) {
             let c = req.body;
