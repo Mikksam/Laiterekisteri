@@ -1,1 +1,27 @@
 
+TODO:
++ Login
++ Loginin funktionaalisuus
++ DataBase
++ Main page (Data Table)
++ Signin toiminnallisuus
++ Omien tietojen muokkaaminen
++ Laitehallinta: funktionaalisuus ja käyttöliittymä
++ Node-controller
++ DB (relaatiot voi hoitaa myöhemmin)
+
+--Uuden laitteen luominen yrittää välillä luoda kahdesti!!!
+
+-Datatablen tietojen muokkaaminen: erillinen formi ko. hommaan vai mitenkä?
+-korjaa laitedatatablen muokkauksen jälkeinen räjähdys
+- Varaus?
+-- Varauskalenteri ? toteutus valmiilla pohjalla ?
+-teeman ja ulkosasun miettiminen mainpageen
+-käytettävyyden testaaminen
+-kalenterin tarkastelut: samanaikaiset varaukset jne!
+-Sisäänkirjautuessa enterin conffaus!
+
+? Login info jos salasana väärin vois olla fiksummin ?
+? muista minut kirjautuessa ?
+
++++++meow
