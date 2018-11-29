@@ -12,6 +12,8 @@ TODO:
 
 --Uuden laitteen luominen yrittää välillä luoda kahdesti!!!
 
+-- DB tee statukselle uusi taulu plus relaatio!!!!!!!!!!!!
+
 -Datatablen tietojen muokkaaminen: erillinen formi ko. hommaan vai mitenkä?
 -korjaa laitedatatablen muokkauksen jälkeinen räjähdys
 - Varaus?
