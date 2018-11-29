@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+ 
+    <meta charset="utf-8" />
+    <title>Etusivu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #b1bfcc;
+        } 
+    </style>
+</head>
+
+<body>
+    <table id="example"class="table table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Sarjanumero</th>
+                <th>Nimi</th>
+            </tr>
+
+        </thead>
+    </table>
+</body>
+</html>
+<script>
+
+   
+
+    $(document).ready(function () {
+
+        var data = JSON.parse('[{"laiteid":"345354", "sarjanumero":"324rsfd2","nimi":"Ipad"}, { "laiteid":"5454", "sarjanumero":"325435434rsfd2", "nimi":"Korjaussarja" }]');
+        $('#example').DataTable({
+
+            "data": data,
+            "columns": [
+                { "data": "laiteid" },
+                { "data": "sarjanumero" },
+                { "data": "nimi" }
+            ],
+
+            "language": {
+                "sEmptyTable": "Ei näytettäviä tuloksia.",
+                "sInfo": "Näytetään rivit _START_ - _END_ (yhteensä _TOTAL_ )",
+                "sInfoEmpty": "Näytetään 0 - 0 (yhteensä 0)",
+                "sInfoFiltered": "(suodatettu _MAX_ tuloksen joukosta)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ",",
+                "sLengthMenu": "Näytä kerralla _MENU_ riviä",
+                "sLoadingRecords": "Ladataan...",
+                "sProcessing": "Hetkinen...",
+                "sSearch": "Etsi:",
+                "sZeroRecords": "Tietoja ei löytynyt",
+                "oPaginate": {
+                    "sFirst": "Ensimmäinen",
+                    "sLast": "Viimeinen",
+                    "sNext": "Seuraava",
+                    "sPrevious": "Edellinen"
+                },
+                "oAria": {
+                    "sSortAscending": ": A-Z",
+                    "sSortDescending": ": Z-A"
+                },
+                "select": {
+                    "rows": {
+                        "_": "Valittuna %d riviä",
+                        "0": "Klikkaa riviä valitaksesi sen",
+                        "1": "Valittuna vain yksi rivi"
+                    }
+                },
+                "buttons": {
+                    "copy": "Kopioi",
+                    "copySuccess": {
+                        "1": "Yksi rivi kopioitu leikepöydälle",
+                        "_": "%d riviä kopioitu leikepöydälle"
+                    },
+                    "copyTitle": "Kopioi leikepöydälle",
+                    "copyKeys": "Paina <i>ctrl</i> tai <i>\u2318</i> + <i>C</i> kopioidaksesi taulukon arvot<br> leikepöydälle. <br><br>Peruuttaaksesi klikkaa tähän tai Esc."
+                },
+            }
+        });
+    });
+</script>

@@ -1,0 +1,19 @@
+{
+  "name": "handlebar",
+  "version": "1.0.0",
+  "description": "npm install handlebars\r npm install consolidate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "consolidate": "^0.15.1",
+    "express": "^4.16.3",
+    "fullcalendar": "^3.9.0",
+    "handlebars": "^4.0.12",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {}
+}
