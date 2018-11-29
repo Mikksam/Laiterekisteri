@@ -14,10 +14,7 @@ TODO:
 
 -- DB tee statukselle uusi taulu plus relaatio!!!!!!!!!!!!
 
--Datatablen tietojen muokkaaminen: erillinen formi ko. hommaan vai mitenkä?
--korjaa laitedatatablen muokkauksen jälkeinen räjähdys
 - Varaus?
--- Varauskalenteri ? toteutus valmiilla pohjalla ?
 -teeman ja ulkosasun miettiminen mainpageen
 -käytettävyyden testaaminen
 -kalenterin tarkastelut: samanaikaiset varaukset jne!
