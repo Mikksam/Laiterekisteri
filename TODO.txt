@@ -7,10 +7,9 @@ TODO:
 + Omien tietojen muokkaaminen
 + Laitehallinta: funktionaalisuus ja käyttöliittymä
 + Node-controller
++ DB (relaatiot voi hoitaa myöhemmin)
 
--+ DB (relaatiot voi hoitaa myöhemmin)
-
-!!!!!! Korjaa laite id pois muutettavista !!!!!!!1
+--Uuden laitteen luominen yrittää välillä luoda kahdesti!!!
 
 -Datatablen tietojen muokkaaminen: erillinen formi ko. hommaan vai mitenkä?
 -korjaa laitedatatablen muokkauksen jälkeinen räjähdys
