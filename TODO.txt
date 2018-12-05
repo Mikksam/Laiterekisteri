@@ -14,6 +14,8 @@ TODO:
 
 -- DB tee statukselle uusi taulu plus relaatio!!!!!!!!!!!!
 
+!!!!!!!!!!!!!!!!!!!!!!!!!YKSIKKÖTESTAUS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 - Varaus?
 -teeman ja ulkosasun miettiminen mainpageen
 -käytettävyyden testaaminen
