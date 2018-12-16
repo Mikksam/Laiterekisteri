@@ -17,10 +17,11 @@ TODO:
 !!!!!!!!!!!!!!!!!!!!!!!!!YKSIKKÖTESTAUS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 - Varaus?
--teeman ja ulkosasun miettiminen mainpageen
+----teeman ja ulkosasun miettiminen mainpageen?
 -käytettävyyden testaaminen
--kalenterin tarkastelut: samanaikaiset varaukset jne!
++-kalenterin tarkastelut: samanaikaiset varaukset jne!
 -Sisäänkirjautuessa enterin conffaus!
+-Kalenterin kuukausinäkymän korjaaminen
 
 ? Login info jos salasana väärin vois olla fiksummin ?
 ? muista minut kirjautuessa ?
